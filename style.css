@@ -1,0 +1,401 @@
+
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DotGothic16', sans-serif;
+   
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+ 
+  .nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  .navOffer {
+    background-color: black;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+    align-items: center;
+    height: 45px;
+  }
+  .offerOptions {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    align-items: center;
+  }
+  .options-icons {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  .offerText {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .nav-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  .nav-links-container div {
+    display: flex;
+    margin: 0 30px;
+  }
+  .nav-links-container a {
+    color: #000;
+  }
+  .nav-logo {
+    position: absolute;
+    height: 80px;
+    width: 150px;
+  }
+  /* ***********************************MENU DESPLEGABLE*********************************** */
+  #women,
+  #men,
+  #kids {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+  #men li,
+  #women li,
+  #kids li {
+    font-size: 15px;
+    font-style: italic;
+    margin: 0 0 10px 0;
+  }
+  #men li:hover,
+  #women li:hover,
+  #kids li:hover {
+    text-decoration: underline;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #men.show,
+  #women.show,
+  #kids.show {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 40px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2%;
+    border-radius: 10%;
+    text-align: left;
+  }
+  #womenIcon,
+  #menIcon,
+  #kidsIcon {
+    transition: 0.5s;
+  }
+  #womenIcon:hover,
+  #menIcon:hover,
+  #kidsIcon:hover {
+    background-color: rgba(161, 156, 156, 0.3);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  /* ***********************************BANNER*********************************** */
+  .banner-container {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  #banner {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 55% 70%;
+    transition: 3s ease-out;
+    background-image: url(./imagenes/imagen0.gif);
+  }
+  .cardsGender {
+    display: grid;
+    grid-template-areas:
+      "men women"
+      "men women"
+      "kids kids";
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    margin: 5% 0;
+    gap: 20px;
+    overflow: hidden;
+  }
+  .genderMale {
+    grid-area: men;
+    background: url("./imagenes/rabia.png") center;
+    background-size: cover;
+    width: 600px;
+    overflow: hidden;
+    transition: transform 0.5s ease-out;
+  }
+  .genderMale h5 {
+    color: #fff;
+    position: absolute;
+    margin: 500px 0 0 50px;
+  }
+  .genderFemale {
+    grid-area: women;
+    background: url("./imagenes/muestra.png") bottom;
+    background-size: cover;
+    width: 600px;
+    transition: transform 0.5s ease-out;
+  }
+  .genderFemale h5 {
+    color: #fff;
+    position: absolute;
+    margin: 500px 0 0 50px;
+  }
+  .genderKids {
+    grid-area: kids;
+    background: url("./imagenes/sonie.jpg") bottom;
+    background-size: cover;
+    transition: transform 0.5s ease-out;
+  }
+  .genderKids h5 {
+    color: #fff;
+    position: absolute;
+    margin: 250px 0 0 1100px;
+  }
+  /* ***********************************HOVERS*********************************** */
+  .genderMale:hover,
+  .genderFemale:hover,
+  .genderKids:hover {
+    transform: scale(0.9);
+  }
+  /* ***********************************FOOTER*********************************** */
+  .footer-container {
+    position: relative;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    width: 80%;
+  }
+  .footer-up a {
+    color: #fff;
+  }
+  .upOne,
+  .upTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20%;
+  }
+  .upThree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .upThree p {
+    margin: 3% 0;
+  }
+  .threeNewsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .threeNewsletter button {
+    height: 30px;
+    width: 50px;
+  }
+  .footer-down {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    height: 80px;
+    width: 120px;
+  }
+  #newsletter {
+    height: 30px;
+  }
+  .webPage {
+    color: #455f70;
+  }
+  /* ********************************* ESTILOS DEL CATALOGO**************************** */
+  .catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 10%;
+    text-align: center;
+  }
+  .catalog-container img {
+    height: 250px;
+    width: 350px;
+    cursor: pointer;
+  }
+  .catalog-container p {
+    font-weight: 100;
+  }
+  
+  
+  /* *****************************************BURGER MENU****************************** */
+  .burgerButton {
+    display: none;
+    width: 100%;
+    margin-right: 5%;
+  }
+  #burgerOpen, 
+  #burgerClose {
+    position: absolute;
+    cursor: pointer;
+  }
+  #burgerClose {
+    display: none;
+  }
+  #burgerMenu {
+    display: none;
+  }
+  #burgerMenu.show {
+    display: flex;
+  }
+  /* ****************************************MEDIA QUERIES****************************  */
+  @media (max-width: 1240px) {
+    .cardsGender {
+      grid-template-areas:
+        "men"
+        "women"
+        "kids";
+    }
+    .genderMale h5,
+    .genderFemale h5,
+    .genderKids h5 {
+      display: none;
+    }
+    .genderMale {
+      background-position: 0 -420px;
+    }
+  }
+  @media (max-width: 650px) {
+    .bannerText h1 {
+      font-size: 25px;
+    }
+    .genderMale,
+    .genderFemale,
+    .genderKids {
+      width: 400px;
+      background-position: center;
+    }
+    .footer-container {
+      height: 60vh;
+    }
+    .upOne,
+    .upTwo {
+      padding: 5% 0%;
+      align-items: center;
+    }
+    .footer-up {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-height: 780px) {
+    .footer-container {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 460px) {
+    .bannerText h1 {
+      font-size: 20px;
+    }
+    .genderMale,
+    .genderFemale,
+    .genderKids {
+      width: 300px;
+    }
+  }
+  /* *******************************BURGER MENU MEDIA Q**************************** */
+  @media (max-width: 780px) {
+    .nav-links-container div,
+    .nav-links-container a,
+    .offerOptions p {
+      display: none;
+    }
+    .offerOptions {
+      width: 100px;
+    }
+    .burgerButton {
+      display: flex;
+      align-items: center;
+      justify-content:right;
+    }
+    .burgerMenu {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 80vh;
+      background-color: rgba(255, 255, 255, .9);
+      z-index: 1;
+      top: 14%;
+    }
+    .burgerMenu a {
+      display: flex;
+      margin: 20px 0 20px 60px;
+      align-items: center;
+      color: #000;
+    }
+    .burgerMenu a:hover {
+      background-color: rgba(0, 0, 0, .7);
+      color: #fff;
+      width: 150px;
+      border-radius: 8px;
+      transition: .5s;
+    }
+  }
+  @media (max-width: 875px) {
+    .catalog-container {
+      margin: 25% 5%;
+    }
+    .catalog-container img {
+      height: 150px;
+      width: 200px;
+    }
+  }
+  @media (max-width: 470px) {
+    .catalog-container {
+      margin: 45% 5%;
+    }
+  }
+  @media (max-height:720px) {
+    .burgerMenu {
+      top: 18%;
+    }
+  }
